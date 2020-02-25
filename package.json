@@ -33,5 +33,5 @@
         "watch": "rimraf build && tsc -watch"
     },
     "typings": "server/client.d.ts",
-    "version": "0.1.1"
+    "version": "0.1.2"
 }
