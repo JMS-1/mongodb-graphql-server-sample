@@ -23,7 +23,7 @@
     },
     "license": "MIT",
     "main": "server/index.js",
-    "name": "@jms-1/mongodb-graphql-server-sample.git",
+    "name": "@jms-1/mongodb-graphql-server-sample",
     "prettier": "@insynergie/prettier-config",
     "repository": "git@github.com:JMS-1/mongodb-graphql-server-sample.git",
     "scripts": {
