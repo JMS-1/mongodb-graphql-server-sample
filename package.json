@@ -28,9 +28,9 @@
     "repository": "git@github.com:JMS-1/mongodb-graphql-server-sample.git",
     "scripts": {
         "build": "rimraf server && tsc",
-        "debug": "node --inspect-brk=17001 build/index",
+        "debug": "node --inspect-brk=17001 server/index",
         "start": "node server/index",
-        "watch": "rimraf build && tsc -watch"
+        "watch": "rimraf server && tsc -watch"
     },
     "typings": "server/client.d.ts",
     "version": "0.1.2"
