@@ -1,7 +1,7 @@
 {
     "author": "Dr. Jochen Manns <vcrnet-1@psimarron.net>",
     "dependencies": {
-        "@jms-1/mongodb-graphql": "^0.1.15",
+        "@jms-1/mongodb-graphql": "^0.1.16",
         "apollo-server": "^2.10.1",
         "fastest-validator": "^1.0.2",
         "graphql": "^14.6.0",
