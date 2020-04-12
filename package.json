@@ -33,5 +33,5 @@
         "watch": "rimraf server && tsc -watch"
     },
     "typings": "server/client.d.ts",
-    "version": "0.1.7"
+    "version": "0.1.8"
 }
