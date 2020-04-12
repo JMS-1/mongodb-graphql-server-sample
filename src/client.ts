@@ -1,4 +1,4 @@
-import { TGqlType, TGetFilterArgs, TGetMethodResult, TGetMethodArgs } from '@jms-1/mongodb-graphql'
+import { TGqlType, TGetFilterArgs, TGetMethodResult, TGetMethodArgs, TCollection } from '@jms-1/mongodb-graphql'
 
 import { BookCollection } from './database/book'
 import { BookReview, Book } from './models/book'
@@ -6,17 +6,19 @@ import { BookReview, Book } from './models/book'
 export type IBookReview = TGqlType<typeof BookReview>
 export type IBook = TGqlType<typeof Book>
 
-export type IBookFindArgs = TGetFilterArgs<typeof BookCollection, 'find'>
-export type IBookFindResult = TGetMethodResult<typeof BookCollection, 'find'>
+type TBookCollection = TCollection<typeof BookCollection>
 
-export type IBookFindOneArgs = TGetMethodArgs<typeof BookCollection, 'findOne'>
-export type IBookFindOneResult = TGetMethodResult<typeof BookCollection, 'findOne'>
+export type IBookFindArgs = TGetFilterArgs<TBookCollection, 'find'>
+export type IBookFindResult = TGetMethodResult<TBookCollection, 'find'>
 
-export type IBookAddArgs = TGetMethodArgs<typeof BookCollection, 'add'>
-export type IBookAddResult = TGetMethodResult<typeof BookCollection, 'add'>
+export type IBookFindOneArgs = TGetMethodArgs<TBookCollection, 'findOne'>
+export type IBookFindOneResult = TGetMethodResult<TBookCollection, 'findOne'>
 
-export type IBookUpdateArgs = TGetMethodArgs<typeof BookCollection, 'update'>
-export type IBookUpdateResult = TGetMethodResult<typeof BookCollection, 'update'>
+export type IBookAddArgs = TGetMethodArgs<TBookCollection, 'add'>
+export type IBookAddResult = TGetMethodResult<TBookCollection, 'add'>
 
-export type IBookRemoveArgs = TGetMethodArgs<typeof BookCollection, 'remove'>
-export type IBookRemoveResult = TGetMethodResult<typeof BookCollection, 'remove'>
+export type IBookUpdateArgs = TGetMethodArgs<TBookCollection, 'update'>
+export type IBookUpdateResult = TGetMethodResult<TBookCollection, 'update'>
+
+export type IBookRemoveArgs = TGetMethodArgs<TBookCollection, 'remove'>
+export type IBookRemoveResult = TGetMethodResult<TBookCollection, 'remove'>

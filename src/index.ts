@@ -4,14 +4,18 @@ import { GraphQLSchema } from 'graphql'
 
 import { BookCollection } from './database/book'
 
-const server = new ApolloServer({
-    schema: new GraphQLSchema(
-        createSchemaConfiguration({
-            books: BookCollection,
-        })
-    ),
-})
+async function startup(): Promise<void> {
+    const server = new ApolloServer({
+        schema: new GraphQLSchema(
+            await createSchemaConfiguration({
+                books: BookCollection,
+            })
+        ),
+    })
 
-server.listen().then(({ url }) => {
-    console.log(`Playground on ${url}`)
-})
+    server.listen().then(({ url }) => {
+        console.log(`Playground on ${url}`)
+    })
+}
+
+startup()
